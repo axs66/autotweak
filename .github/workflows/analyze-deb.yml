@@ -12,7 +12,7 @@ on:
 
 jobs:
   analyze-deb:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest   # ✅ 改为 Ubuntu，支持 dpkg
 
     steps:
       - name: Checkout Repository
@@ -25,6 +25,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          sudo apt update
+          sudo apt install -y dpkg
           pip3 install lief
 
       - name: Download .deb (if URL provided)
@@ -54,6 +56,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add output/
           git commit -m "Auto: Add analysis result from workflow" || echo "Nothing to commit"
-          git push
-        env:
-          GH_TOKEN: ${{ secrets.PAT }}
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }} HEAD:main

@@ -11,8 +11,8 @@ rm -rf "$RAW_OUTPUT" "$SRC_OUTPUT"
 mkdir -p "$RAW_OUTPUT" "$SRC_OUTPUT"
 
 echo "[*] 解压 .deb 插件..."
-DEB_FILE=$(find . -name "*.deb" | head -n 1)
-if [[ -z "$DEB_FILE" ]]; then
+DEB_FILE="work/plugin.deb"
+if [[ ! -f "$DEB_FILE" ]]; then
     echo "[!] 没有找到 .deb 文件"
     exit 1
 fi
@@ -30,6 +30,7 @@ if [[ -z "$TARGET_DYLIB" ]]; then
     exit 1
 fi
 
+# 根据 dylib 选择进程
 if [[ "$TARGET_DYLIB" == *"WeChat"* ]]; then
     PROCESS="WeChat"
 elif [[ "$TARGET_DYLIB" == *"UIKit"* ]] || [[ "$TARGET_DYLIB" == *"Keyboard"* ]]; then
@@ -39,7 +40,7 @@ else
 fi
 
 echo "[*] 自动 attach 到进程：$PROCESS"
-frida -n "$PROCESS" -U -l "$SCRIPTS_DIR/frida_script.js"  # ✅ 移除 --no-pause 参数
+frida -n "$PROCESS" -U -l "$SCRIPTS_DIR/frida_script.js" --no-pause > "$RAW_OUTPUT/frida_log.txt"
 
 echo "[*] 生成 Hook 源码..."
 python3 "$SCRIPTS_DIR/generate_hooks_from_lief.py" "$RAW_OUTPUT/lief_result.json" "$SRC_OUTPUT"

@@ -12,7 +12,7 @@ on:
 
 jobs:
   analyze-deb:
-    runs-on: ubuntu-latest   # ✅ 改为 Ubuntu，支持 dpkg
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
@@ -27,7 +27,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y dpkg
-          pip3 install lief
+          pip3 install lief frida-tools  # ✅ 安装 LIEF + Frida CLI
 
       - name: Download .deb (if URL provided)
         if: ${{ github.event.inputs.deb_url != '' }}

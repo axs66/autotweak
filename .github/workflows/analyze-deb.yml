@@ -1,0 +1,55 @@
+name: Deb Reverse Analysis
+
+on:
+  workflow_dispatch:
+    inputs:
+      deb_url:
+        description: 'Optional .deb download URL'
+        required: false
+      local_deb:
+        description: 'Use .deb from repository (put in root dir)'
+        required: false
+        default: 'true'
+
+jobs:
+  analyze:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          brew install python frida
+          pip3 install lief
+          python3 -m pip install --upgrade pip
+          mkdir -p output/raw output/src work
+
+      - name: Download .deb (if URL provided)
+        if: ${{ github.event.inputs.deb_url != '' }}
+        run: |
+          curl -L "${{ github.event.inputs.deb_url }}" -o plugin.deb
+
+      - name: Use Local .deb (if exists)
+        if: ${{ github.event.inputs.deb_url == '' }}
+        run: |
+          echo "Using existing .deb file in repo"
+
+      - name: Run Reverse Analysis Script
+        run: bash run_all.sh
+
+      - name: Upload Result Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: analysis-output
+          path: |
+            output/raw
+            output/src
+
+      - name: Auto Commit Results (Optional)
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add output/
+          git commit -m "auto: update reverse analysis results" || echo "No changes"
+          git push || echo "No push permissions"

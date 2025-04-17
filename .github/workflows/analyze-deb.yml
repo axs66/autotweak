@@ -27,25 +27,29 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y dpkg
-          pip3 install lief frida-tools  # ✅ 安装 LIEF + Frida CLI
+          pip3 install lief frida-tools  # ✅ 安装 LIEF 和 Frida CLI（如后续使用设备可启用）
+
+      - name: Prepare .deb
+        run: mkdir -p work
 
       - name: Download .deb (if URL provided)
         if: ${{ github.event.inputs.deb_url != '' }}
         run: |
-          mkdir -p work
           curl -L "${{ github.event.inputs.deb_url }}" -o work/plugin.deb
 
       - name: Use local .deb (if path provided)
         if: ${{ github.event.inputs.deb_path != '' }}
         run: |
-          mkdir -p work
           cp "${{ github.event.inputs.deb_path }}" work/plugin.deb
 
-      - name: Extract .deb
+      - name: Validate .deb file exists
         run: |
-          dpkg-deb -x work/plugin.deb work/
+          if [ ! -f work/plugin.deb ]; then
+            echo "::error::No .deb file found to analyze."
+            exit 1
+          fi
 
-      - name: Run Full Analysis (Skipping Device Attachment)
+      - name: Run Full Analysis (Skip Frida Attachment)
         run: |
           chmod +x run_all.sh
           ./run_all.sh

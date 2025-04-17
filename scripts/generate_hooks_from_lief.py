@@ -3,30 +3,22 @@ import json
 import os
 import re
 
-def sanitize_symbol(symbol):
-    symbol = symbol.replace(" ", "_")
-    symbol = symbol.replace(":", "_")
-    symbol = symbol.replace("+", "_plus_")
-    symbol = symbol.replace("-", "_minus_")
-    symbol = symbol.replace("[", "_")
-    symbol = symbol.replace("]", "_")
-    symbol = symbol.replace(".", "_")
-    symbol = re.sub(r'[^a-zA-Z0-9_]', '_', symbol)
-    return symbol
+def extract_objc_class(symbol):
+    # 匹配 _OBJC_CLASS_$_XXX 形式
+    match = re.match(r"_OBJC_CLASS_\$_([A-Za-z0-9_]+)", symbol)
+    if match:
+        return match.group(1)
+    return None
 
-def is_valid_symbol(symbol):
-    invalid_prefixes = [
-        "_NSClassFromString", "_OBJC_CLASS_$_", "_OBJC_METACLASS_$_",
-        "__Tt", "_dispatch", "_swift", "_objc_", "___", "__Z", "_ZZ"
-    ]
-    return not any(symbol.startswith(prefix) for prefix in invalid_prefixes)
+def generate_hook(class_name):
+    return f"""// Hook {class_name}
+%hook {class_name}
 
-def generate_hook(symbol):
-    return f"""%hookf({symbol})
-void {symbol}() {{
+- (void)viewDidLoad {{
     %orig;
-    NSLog(@\"[+] Hooked: {symbol}\");
+    NSLog(@\"[+] {class_name} viewDidLoad called\");
 }}
+
 %end
 
 """
@@ -35,25 +27,29 @@ def main(json_path, output_dir):
     with open(json_path, "r") as f:
         data = json.load(f)
 
-    all_symbols = []
+    raw_symbols = []
     for dylib in data.get("dylibs", []):
         symbols = data.get("symbols", {}).get(dylib, [])
-        filtered = list(filter(is_valid_symbol, symbols))
-        all_symbols.extend(filtered[:5])  # 每个 dylib 取前 5 个有效符号
+        raw_symbols.extend(symbols[:20])  # 每个 dylib 最多取前20个
 
-    if not all_symbols:
-        print("[!] 没有找到有效符号，跳过生成 AutoTweak.xm")
+    objc_classes = set()
+    for symbol in raw_symbols:
+        class_name = extract_objc_class(symbol)
+        if class_name:
+            objc_classes.add(class_name)
+
+    if not objc_classes:
+        print("[!] 没有找到可用的 Objective-C 类，跳过生成 tweak.xm")
         return
 
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, "AutoTweak.xm")
-    with open(output_file, "w") as f:
-        f.write("// 自动生成 Hook 模板\n\n")
-        for sym in all_symbols:
-            safe_sym = sanitize_symbol(sym)
-            f.write(generate_hook(safe_sym))
+    with open(os.path.join(output_dir, "AutoTweak.xm"), "w") as f:
+        f.write("// 自动生成 Objective-C 类 Hook 模板\n\n")
+        for class_name in sorted(objc_classes):
+            f.write(generate_hook(class_name))
+            f.write("\n")
 
-    print(f"[*] Hook 模板写入 {output_file}")
+    print(f"[*] 成功写入 {output_dir}/AutoTweak.xm，共 {len(objc_classes)} 个 hook 类")
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:

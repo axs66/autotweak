@@ -4,52 +4,53 @@ on:
   workflow_dispatch:
     inputs:
       deb_url:
-        description: 'Optional .deb download URL'
+        description: 'URL of the .deb plugin'
         required: false
-      local_deb:
-        description: 'Use .deb from repository (put in root dir)'
+      deb_path:
+        description: 'Local path of the .deb file in repo'
         required: false
-        default: 'true'
 
 jobs:
-  analyze:
+  analyze-deb:
     runs-on: macos-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
       - name: Install Dependencies
         run: |
-          brew install python frida
+          brew install lief
           pip3 install lief
-          python3 -m pip install --upgrade pip
-          mkdir -p output/raw output/src work
 
       - name: Download .deb (if URL provided)
         if: ${{ github.event.inputs.deb_url != '' }}
         run: |
-          curl -L "${{ github.event.inputs.deb_url }}" -o plugin.deb
+          mkdir -p work
+          curl -L "${{ github.event.inputs.deb_url }}" -o work/plugin.deb
 
-      - name: Use Local .deb (if exists)
-        if: ${{ github.event.inputs.deb_url == '' }}
+      - name: Use local .deb (if path provided)
+        if: ${{ github.event.inputs.deb_path != '' }}
         run: |
-          echo "Using existing .deb file in repo"
+          mkdir -p work
+          cp "${{ github.event.inputs.deb_path }}" work/plugin.deb
 
-      - name: Run Reverse Analysis Script
-        run: bash run_all.sh
+      - name: Extract .deb
+        run: |
+          dpkg-deb -x work/plugin.deb work/
 
-      - name: Upload Result Artifacts
+      - name: Run Full Analysis
+        run: |
+          chmod +x run_all.sh
+          ./run_all.sh
+
+      - name: Upload Results
         uses: actions/upload-artifact@v3
         with:
-          name: analysis-output
-          path: |
-            output/raw
-            output/src
-
-      - name: Auto Commit Results (Optional)
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add output/
-          git commit -m "auto: update reverse analysis results" || echo "No changes"
-          git push || echo "No push permissions"
+          name: analysis-result
+          path: output/

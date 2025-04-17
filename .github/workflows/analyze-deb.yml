@@ -49,9 +49,8 @@ jobs:
           chmod +x run_all.sh
           ./run_all.sh
 
-- name: Upload Results
-  uses: actions/upload-artifact@v2
-  with:
-    name: analysis-result
-    path: output/
-
+      - name: Upload Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: analysis-result
+          path: output/

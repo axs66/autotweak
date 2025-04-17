@@ -15,41 +15,49 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # 2. Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
+      # 3. Install dependencies (dpkg and Python packages)
       - name: Install Dependencies
         run: |
           sudo apt update
           sudo apt install -y dpkg
           pip3 install lief frida-tools  # ✅ 安装 LIEF + Frida CLI
 
+      # 4. Download .deb file from URL (if provided)
       - name: Download .deb (if URL provided)
         if: ${{ github.event.inputs.deb_url != '' }}
         run: |
           mkdir -p work
           curl -L "${{ github.event.inputs.deb_url }}" -o work/plugin.deb
 
+      # 5. Use local .deb file (if path provided)
       - name: Use local .deb (if path provided)
         if: ${{ github.event.inputs.deb_path != '' }}
         run: |
           mkdir -p work
           cp "${{ github.event.inputs.deb_path }}" work/plugin.deb
 
+      # 6. Extract .deb file
       - name: Extract .deb
         run: |
           dpkg-deb -x work/plugin.deb work/
 
+      # 7. Run full analysis using run_all.sh
       - name: Run Full Analysis
         run: |
           chmod +x run_all.sh
           ./run_all.sh
 
+      # 8. Commit and push analysis results back to the repository
       - name: Commit and Push Results
         run: |
           git config user.name "github-actions"

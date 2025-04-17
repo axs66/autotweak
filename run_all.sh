@@ -39,8 +39,15 @@ else
     PROCESS="SpringBoard"
 fi
 
+echo "[*] 检查设备是否连接..."
+frida-ls-devices
+if [[ $? -ne 0 ]]; then
+    echo "[!] 未找到设备，无法 attach"
+    exit 1
+fi
+
 echo "[*] 自动 attach 到进程：$PROCESS"
-frida -n "$PROCESS" -U -l "$SCRIPTS_DIR/frida_script.js" > "$RAW_OUTPUT/frida_log.txt"
+frida -n "$PROCESS" -U -l "$SCRIPTS_DIR/frida_script.js" --no-pause > "$RAW_OUTPUT/frida_log.txt"
 
 echo "[*] 生成 Hook 源码..."
 python3 "$SCRIPTS_DIR/generate_hooks_from_lief.py" "$RAW_OUTPUT/lief_result.json" "$SRC_OUTPUT"

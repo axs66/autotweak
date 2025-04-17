@@ -25,20 +25,26 @@ echo "[*] 分析完成，结果写入 $RAW_OUTPUT/lief_result.json"
 
 echo "[*] 识别目标 dylib 并选取分析进程..."
 TARGET_DYLIB=$(jq -r '.dylibs[0]' "$RAW_OUTPUT/lief_result.json")
-if [[ -z "$TARGET_DYLIB" || "$TARGET_DYLIB" == "null" ]]; then
+if [[ -z "$TARGET_DYLIB" ]]; then
     echo "[!] 未识别到目标 dylib"
     exit 1
 fi
-echo "[*] 识别到目标 dylib: $TARGET_DYLIB"
 
 echo "[*] 跳过设备连接，继续生成源码..."
 
 echo "[*] 生成 Hook 源码..."
 python3 "$SCRIPTS_DIR/generate_hooks_from_lief.py" "$RAW_OUTPUT/lief_result.json" "$SRC_OUTPUT"
-echo "[*] Hook 模板写入 $SRC_OUTPUT/AutoTweak.xm"
+
+HOOK_FILE="$SRC_OUTPUT/AutoTweak.xm"
+if [[ -f "$HOOK_FILE" ]]; then
+    HOOK_COUNT=$(grep -c "^%hook " "$HOOK_FILE")
+    echo "[*] Hook 模板生成成功：$HOOK_FILE"
+    echo "[*] 共生成 $HOOK_COUNT 个 Objective-C 类 Hook"
+else
+    echo "[!] 未生成 AutoTweak.xm 文件，请检查符号提取逻辑"
+fi
 
 echo "[*] 自动生成 Makefile 和 tweak.xm..."
 python3 "$SCRIPTS_DIR/generate_makefile.py" "$SRC_OUTPUT" "$RAW_OUTPUT/lief_result.json"
-echo "[*] Makefile 和 tweak.xm 生成完成"
 
 echo "[*] 分析完成，结果已输出至 output 目录"

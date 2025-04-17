@@ -1,4 +1,4 @@
-// Hooking symbols from work/var/jb/Library/MobileSubstrate/DynamicLibraries/WechatPushMsgPage.dylib
+// Hooking symbols from work/var/jb/Library/MobileSubstrate/DynamicLibraries/WeChatEnhance.dylib
 
 %hook radr://5614542
 void radr://5614542() {
@@ -7,633 +7,759 @@ void radr://5614542() {
 }
 %end
 
-%hook _executeCount
-void _executeCount() {
+%hook _OBJC_CLASS_$_CSAccountDetailViewController
+void _OBJC_CLASS_$_CSAccountDetailViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _executeCount");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSAccountDetailViewController");
 }
 %end
 
-%hook _$s10ObjectiveC8SelectorVMn
-void _$s10ObjectiveC8SelectorVMn() {
+%hook _OBJC_CLASS_$_CSAvatarSettingsViewController
+void _OBJC_CLASS_$_CSAvatarSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s10ObjectiveC8SelectorVMn");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSAvatarSettingsViewController");
 }
 %end
 
-%hook _$s5Group5Orion7AnyHookPTl
-void _$s5Group5Orion7AnyHookPTl() {
+%hook _OBJC_CLASS_$_CSAvatarTitleView
+void _OBJC_CLASS_$_CSAvatarTitleView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Group5Orion7AnyHookPTl");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSAvatarTitleView");
 }
 %end
 
-%hook _$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTj
-void _$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTj() {
+%hook _OBJC_CLASS_$_CSBackgroundRunViewController
+void _OBJC_CLASS_$_CSBackgroundRunViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTj");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSBackgroundRunViewController");
 }
 %end
 
-%hook _$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTq
-void _$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTq() {
+%hook _OBJC_CLASS_$_CSChatAttachmentSettingsViewController
+void _OBJC_CLASS_$_CSChatAttachmentSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion010_ClassHookB0C6targetACyxGx_tcfCTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSChatAttachmentSettingsViewController");
 }
 %end
 
-%hook _$s5Orion010_ClassHookB0C6targetACyxGx_tcfc
-void _$s5Orion010_ClassHookB0C6targetACyxGx_tcfc() {
+%hook _OBJC_CLASS_$_CSCustomViewController
+void _OBJC_CLASS_$_CSCustomViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion010_ClassHookB0C6targetACyxGx_tcfc");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSCustomViewController");
 }
 %end
 
-%hook _$s5Orion010_ClassHookB0C6targetxvg
-void _$s5Orion010_ClassHookB0C6targetxvg() {
+%hook _OBJC_CLASS_$_CSEntrySettingsViewController
+void _OBJC_CLASS_$_CSEntrySettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion010_ClassHookB0C6targetxvg");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSEntrySettingsViewController");
 }
 %end
 
-%hook _$s5Orion010_ClassHookB0CMn
-void _$s5Orion010_ClassHookB0CMn() {
+%hook _OBJC_CLASS_$_CSFavoriteSettingsViewController
+void _OBJC_CLASS_$_CSFavoriteSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion010_ClassHookB0CMn");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSFavoriteSettingsViewController");
 }
 %end
 
-%hook _$s5Orion010_ClassHookB0Cfd
-void _$s5Orion010_ClassHookB0Cfd() {
+%hook _OBJC_CLASS_$_CSGameCheatsViewController
+void _OBJC_CLASS_$_CSGameCheatsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion010_ClassHookB0Cfd");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSGameCheatsViewController");
 }
 %end
 
-%hook _$s5Orion12DefaultGroupVAA04HookC0AAWP
-void _$s5Orion12DefaultGroupVAA04HookC0AAWP() {
+%hook _OBJC_CLASS_$_CSInputTextSettingsViewController
+void _OBJC_CLASS_$_CSInputTextSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12DefaultGroupVAA04HookC0AAWP");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSInputTextSettingsViewController");
 }
 %end
 
-%hook _$s5Orion12DefaultGroupVMn
-void _$s5Orion12DefaultGroupVMn() {
+%hook _OBJC_CLASS_$_CSMessageTimeSettingsViewController
+void _OBJC_CLASS_$_CSMessageTimeSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12DefaultGroupVMn");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSMessageTimeSettingsViewController");
 }
 %end
 
-%hook _$s5Orion12DefaultTweakVAA0C0AAWP
-void _$s5Orion12DefaultTweakVAA0C0AAWP() {
+%hook _OBJC_CLASS_$_CSNavigationTitleSettingsViewController
+void _OBJC_CLASS_$_CSNavigationTitleSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12DefaultTweakVAA0C0AAWP");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSNavigationTitleSettingsViewController");
 }
 %end
 
-%hook _$s5Orion12DefaultTweakVMa
-void _$s5Orion12DefaultTweakVMa() {
+%hook _OBJC_CLASS_$_CSResetSettingsViewController
+void _OBJC_CLASS_$_CSResetSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12DefaultTweakVMa");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSResetSettingsViewController");
 }
 %end
 
-%hook _$s5Orion12_GlueAnyHookMp
-void _$s5Orion12_GlueAnyHookMp() {
+%hook _OBJC_CLASS_$_CSSettingItem
+void _OBJC_CLASS_$_CSSettingItem() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12_GlueAnyHookMp");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSSettingItem");
 }
 %end
 
-%hook _$s5Orion12_GlueAnyHookP15hookDidActivateyyFZTq
-void _$s5Orion12_GlueAnyHookP15hookDidActivateyyFZTq() {
+%hook _OBJC_CLASS_$_CSSettingSection
+void _OBJC_CLASS_$_CSSettingSection() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12_GlueAnyHookP15hookDidActivateyyFZTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSSettingSection");
 }
 %end
 
-%hook _$s5Orion12_GlueAnyHookP16hookWillActivateSbyFZTq
-void _$s5Orion12_GlueAnyHookP16hookWillActivateSbyFZTq() {
+%hook _OBJC_CLASS_$_CSSettingTableViewCell
+void _OBJC_CLASS_$_CSSettingTableViewCell() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12_GlueAnyHookP16hookWillActivateSbyFZTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSSettingTableViewCell");
 }
 %end
 
-%hook _$s5Orion12_GlueAnyHookP8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZTq
-void _$s5Orion12_GlueAnyHookP8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZTq() {
+%hook _OBJC_CLASS_$_CSTimeLineTailSettingsViewController
+void _OBJC_CLASS_$_CSTimeLineTailSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12_GlueAnyHookP8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSTimeLineTailSettingsViewController");
 }
 %end
 
-%hook _$s5Orion12_GlueAnyHookP9groupTypeAA0D5Group_pXpvgZTq
-void _$s5Orion12_GlueAnyHookP9groupTypeAA0D5Group_pXpvgZTq() {
+%hook _OBJC_CLASS_$_CSTouchTrailViewController
+void _OBJC_CLASS_$_CSTouchTrailViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion12_GlueAnyHookP9groupTypeAA0D5Group_pXpvgZTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSTouchTrailViewController");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookMp
-void _$s5Orion14_GlueClassHookMp() {
+%hook _OBJC_CLASS_$_CSUICleanViewController
+void _OBJC_CLASS_$_CSUICleanViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookMp");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSUICleanViewController");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookP0D4TypeAC_AA0cD8ProtocolTn
-void _$s5Orion14_GlueClassHookP0D4TypeAC_AA0cD8ProtocolTn() {
+%hook _OBJC_CLASS_$_CSUIHelper
+void _OBJC_CLASS_$_CSUIHelper() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookP0D4TypeAC_AA0cD8ProtocolTn");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSUIHelper");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookP7storageAA01_bcD7StorageCvgZTq
-void _$s5Orion14_GlueClassHookP7storageAA01_bcD7StorageCvgZTq() {
+%hook _OBJC_CLASS_$_CSUpdateControlViewController
+void _OBJC_CLASS_$_CSUpdateControlViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookP7storageAA01_bcD7StorageCvgZTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSUpdateControlViewController");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookP8OrigTypeAC_AA0cD8ProtocolTn
-void _$s5Orion14_GlueClassHookP8OrigTypeAC_AA0cD8ProtocolTn() {
+%hook _OBJC_CLASS_$_CSUserInfoHelper
+void _OBJC_CLASS_$_CSUserInfoHelper() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookP8OrigTypeAC_AA0cD8ProtocolTn");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSUserInfoHelper");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookP8SuprTypeAC_AA0cD8ProtocolTn
-void _$s5Orion14_GlueClassHookP8SuprTypeAC_AA0cD8ProtocolTn() {
+%hook _OBJC_CLASS_$_CSUserInfoPopoverController
+void _OBJC_CLASS_$_CSUserInfoPopoverController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookP8SuprTypeAC_AA0cD8ProtocolTn");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSUserInfoPopoverController");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookP8activate04withcD7BuilderyAA01_bcdG0Vz_tFZTq
-void _$s5Orion14_GlueClassHookP8activate04withcD7BuilderyAA01_bcdG0Vz_tFZTq() {
+%hook _OBJC_CLASS_$_CSVersionSettingsViewController
+void _OBJC_CLASS_$_CSVersionSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookP8activate04withcD7BuilderyAA01_bcdG0Vz_tFZTq");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSVersionSettingsViewController");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookPAA01_b3AnyD0Tb
-void _$s5Orion14_GlueClassHookPAA01_b3AnyD0Tb() {
+%hook _OBJC_CLASS_$_CSWCEnhanceViewController
+void _OBJC_CLASS_$_CSWCEnhanceViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookPAA01_b3AnyD0Tb");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CSWCEnhanceViewController");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookPAAE15hookDidActivateyyFZ
-void _$s5Orion14_GlueClassHookPAAE15hookDidActivateyyFZ() {
+%hook _OBJC_CLASS_$_ColorPreviewView
+void _OBJC_CLASS_$_ColorPreviewView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookPAAE15hookDidActivateyyFZ");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_ColorPreviewView");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookPAAE16hookWillActivateSbyFZ
-void _$s5Orion14_GlueClassHookPAAE16hookWillActivateSbyFZ() {
+%hook _OBJC_CLASS_$_NSTimerCallbackClass
+void _OBJC_CLASS_$_NSTimerCallbackClass() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookPAAE16hookWillActivateSbyFZ");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSTimerCallbackClass");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookPAAE17initializeStorageAA01_bcdF0CyFZ
-void _$s5Orion14_GlueClassHookPAAE17initializeStorageAA01_bcdF0CyFZ() {
+%hook _OBJC_CLASS_$_WBTouchTrailDotView
+void _OBJC_CLASS_$_WBTouchTrailDotView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookPAAE17initializeStorageAA01_bcdF0CyFZ");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_WBTouchTrailDotView");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookPAAE8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZ
-void _$s5Orion14_GlueClassHookPAAE8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZ() {
+%hook _OBJC_CLASS_$_WBTouchTrailView
+void _OBJC_CLASS_$_WBTouchTrailView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookPAAE8activate2inSayAA0D10DescriptorOGAA5Tweak_pXp_tFZ");
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_WBTouchTrailView");
 }
 %end
 
-%hook _$s5Orion14_GlueClassHookPAAE9groupTypeAA0D5Group_pXpvgZ
-void _$s5Orion14_GlueClassHookPAAE9groupTypeAA0D5Group_pXpvgZ() {
+%hook _OBJC_METACLASS_$_CSAccountDetailViewController
+void _OBJC_METACLASS_$_CSAccountDetailViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion14_GlueClassHookPAAE9groupTypeAA0D5Group_pXpvgZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSAccountDetailViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolMp
-void _$s5Orion17ClassHookProtocolMp() {
+%hook _OBJC_METACLASS_$_CSAvatarSettingsViewController
+void _OBJC_METACLASS_$_CSAvatarSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolMp");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSAvatarSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP10targetNameSSvgZTq
-void _$s5Orion17ClassHookProtocolP10targetNameSSvgZTq() {
+%hook _OBJC_METACLASS_$_CSAvatarTitleView
+void _OBJC_METACLASS_$_CSAvatarTitleView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP10targetNameSSvgZTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSAvatarTitleView");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP12subclassModeAA08SubclassF0OvgZTq
-void _$s5Orion17ClassHookProtocolP12subclassModeAA08SubclassF0OvgZTq() {
+%hook _OBJC_METACLASS_$_CSBackgroundRunViewController
+void _OBJC_METACLASS_$_CSBackgroundRunViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP12subclassModeAA08SubclassF0OvgZTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSBackgroundRunViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP13deinitializerAA12DeinitPolicyOyFTq
-void _$s5Orion17ClassHookProtocolP13deinitializerAA12DeinitPolicyOyFTq() {
+%hook _OBJC_METACLASS_$_CSChatAttachmentSettingsViewController
+void _OBJC_METACLASS_$_CSChatAttachmentSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP13deinitializerAA12DeinitPolicyOyFTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSChatAttachmentSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP5_GlueAC_AA01_ebC0Tn
-void _$s5Orion17ClassHookProtocolP5_GlueAC_AA01_ebC0Tn() {
+%hook _OBJC_METACLASS_$_CSCustomViewController
+void _OBJC_METACLASS_$_CSCustomViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP5_GlueAC_AA01_ebC0Tn");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSCustomViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP6target6TargetQzvgTq
-void _$s5Orion17ClassHookProtocolP6target6TargetQzvgTq() {
+%hook _OBJC_METACLASS_$_CSEntrySettingsViewController
+void _OBJC_METACLASS_$_CSEntrySettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP6target6TargetQzvgTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSEntrySettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP6targetx6TargetQz_tcfCTq
-void _$s5Orion17ClassHookProtocolP6targetx6TargetQz_tcfCTq() {
+%hook _OBJC_METACLASS_$_CSFavoriteSettingsViewController
+void _OBJC_METACLASS_$_CSFavoriteSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP6targetx6TargetQz_tcfCTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSFavoriteSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolP9protocolsSaySo0D0CGvgZTq
-void _$s5Orion17ClassHookProtocolP9protocolsSaySo0D0CGvgZTq() {
+%hook _OBJC_METACLASS_$_CSGameCheatsViewController
+void _OBJC_METACLASS_$_CSGameCheatsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolP9protocolsSaySo0D0CGvgZTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSGameCheatsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolPAA03AnyC0Tb
-void _$s5Orion17ClassHookProtocolPAA03AnyC0Tb() {
+%hook _OBJC_METACLASS_$_CSInputTextSettingsViewController
+void _OBJC_METACLASS_$_CSInputTextSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolPAA03AnyC0Tb");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSInputTextSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolPAAE10targetNameSSvgZ
-void _$s5Orion17ClassHookProtocolPAAE10targetNameSSvgZ() {
+%hook _OBJC_METACLASS_$_CSMessageTimeSettingsViewController
+void _OBJC_METACLASS_$_CSMessageTimeSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolPAAE10targetNameSSvgZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSMessageTimeSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolPAAE12subclassModeAA08SubclassF0OvgZ
-void _$s5Orion17ClassHookProtocolPAAE12subclassModeAA08SubclassF0OvgZ() {
+%hook _OBJC_METACLASS_$_CSNavigationTitleSettingsViewController
+void _OBJC_METACLASS_$_CSNavigationTitleSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolPAAE12subclassModeAA08SubclassF0OvgZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSNavigationTitleSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolPAAE13deinitializerAA12DeinitPolicyOyF
-void _$s5Orion17ClassHookProtocolPAAE13deinitializerAA12DeinitPolicyOyF() {
+%hook _OBJC_METACLASS_$_CSResetSettingsViewController
+void _OBJC_METACLASS_$_CSResetSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolPAAE13deinitializerAA12DeinitPolicyOyF");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSResetSettingsViewController");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolPAAE5group5GroupQzvgZ
-void _$s5Orion17ClassHookProtocolPAAE5group5GroupQzvgZ() {
+%hook _OBJC_METACLASS_$_CSSettingItem
+void _OBJC_METACLASS_$_CSSettingItem() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolPAAE5group5GroupQzvgZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSSettingItem");
 }
 %end
 
-%hook _$s5Orion17ClassHookProtocolPAAE9protocolsSaySo0D0CGvgZ
-void _$s5Orion17ClassHookProtocolPAAE9protocolsSaySo0D0CGvgZ() {
+%hook _OBJC_METACLASS_$_CSSettingSection
+void _OBJC_METACLASS_$_CSSettingSection() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion17ClassHookProtocolPAAE9protocolsSaySo0D0CGvgZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSSettingSection");
 }
 %end
 
-%hook _$s5Orion21_GlueClassHookBuilderV03addD0__02isC6Method10completiony10ObjectiveC8SelectorV_xSbyxctlF
-void _$s5Orion21_GlueClassHookBuilderV03addD0__02isC6Method10completiony10ObjectiveC8SelectorV_xSbyxctlF() {
+%hook _OBJC_METACLASS_$_CSSettingTableViewCell
+void _OBJC_METACLASS_$_CSSettingTableViewCell() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion21_GlueClassHookBuilderV03addD0__02isC6Method10completiony10ObjectiveC8SelectorV_xSbyxctlF");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSSettingTableViewCell");
 }
 %end
 
-%hook _$s5Orion24_GlueClassHookTrampolineMp
-void _$s5Orion24_GlueClassHookTrampolineMp() {
+%hook _OBJC_METACLASS_$_CSTimeLineTailSettingsViewController
+void _OBJC_METACLASS_$_CSTimeLineTailSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion24_GlueClassHookTrampolineMp");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSTimeLineTailSettingsViewController");
 }
 %end
 
-%hook _$s5Orion24_GlueClassHookTrampolinePAA0cD8ProtocolTb
-void _$s5Orion24_GlueClassHookTrampolinePAA0cD8ProtocolTb() {
+%hook _OBJC_METACLASS_$_CSTouchTrailViewController
+void _OBJC_METACLASS_$_CSTouchTrailViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion24_GlueClassHookTrampolinePAA0cD8ProtocolTb");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSTouchTrailViewController");
 }
 %end
 
-%hook _$s5Orion24_GlueClassHookTrampolinePAAE9callSuper_4sendqd__qd_0_m_qd__qd_0__SVtXEtr0_lF
-void _$s5Orion24_GlueClassHookTrampolinePAAE9callSuper_4sendqd__qd_0_m_qd__qd_0__SVtXEtr0_lF() {
+%hook _OBJC_METACLASS_$_CSUICleanViewController
+void _OBJC_METACLASS_$_CSUICleanViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion24_GlueClassHookTrampolinePAAE9callSuper_4sendqd__qd_0_m_qd__qd_0__SVtXEtr0_lF");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSUICleanViewController");
 }
 %end
 
-%hook _$s5Orion5TweakPAAE9_activate7backend5hooksyqd___SayAA12_GlueAnyHook_pXpGtAA7BackendRd__lFZ
-void _$s5Orion5TweakPAAE9_activate7backend5hooksyqd___SayAA12_GlueAnyHook_pXpGtAA7BackendRd__lFZ() {
+%hook _OBJC_METACLASS_$_CSUIHelper
+void _OBJC_METACLASS_$_CSUIHelper() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion5TweakPAAE9_activate7backend5hooksyqd___SayAA12_GlueAnyHook_pXpGtAA7BackendRd__lFZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSUIHelper");
 }
 %end
 
-%hook _$s5Orion7AnyHookMp
-void _$s5Orion7AnyHookMp() {
+%hook _OBJC_METACLASS_$_CSUpdateControlViewController
+void _OBJC_METACLASS_$_CSUpdateControlViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookMp");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSUpdateControlViewController");
 }
 %end
 
-%hook _$s5Orion7AnyHookP15hookDidActivateyyFZTq
-void _$s5Orion7AnyHookP15hookDidActivateyyFZTq() {
+%hook _OBJC_METACLASS_$_CSUserInfoHelper
+void _OBJC_METACLASS_$_CSUserInfoHelper() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookP15hookDidActivateyyFZTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSUserInfoHelper");
 }
 %end
 
-%hook _$s5Orion7AnyHookP16hookWillActivateSbyFZTq
-void _$s5Orion7AnyHookP16hookWillActivateSbyFZTq() {
+%hook _OBJC_METACLASS_$_CSUserInfoPopoverController
+void _OBJC_METACLASS_$_CSUserInfoPopoverController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookP16hookWillActivateSbyFZTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSUserInfoPopoverController");
 }
 %end
 
-%hook _$s5Orion7AnyHookP5GroupAC_AA0cD0Tn
-void _$s5Orion7AnyHookP5GroupAC_AA0cD0Tn() {
+%hook _OBJC_METACLASS_$_CSVersionSettingsViewController
+void _OBJC_METACLASS_$_CSVersionSettingsViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookP5GroupAC_AA0cD0Tn");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSVersionSettingsViewController");
 }
 %end
 
-%hook _$s5Orion7AnyHookP5group5GroupQzvgZTq
-void _$s5Orion7AnyHookP5group5GroupQzvgZTq() {
+%hook _OBJC_METACLASS_$_CSWCEnhanceViewController
+void _OBJC_METACLASS_$_CSWCEnhanceViewController() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookP5group5GroupQzvgZTq");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_CSWCEnhanceViewController");
 }
 %end
 
-%hook _$s5Orion7AnyHookPAAE15hookDidActivateyyFZ
-void _$s5Orion7AnyHookPAAE15hookDidActivateyyFZ() {
+%hook _OBJC_METACLASS_$_ColorPreviewView
+void _OBJC_METACLASS_$_ColorPreviewView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookPAAE15hookDidActivateyyFZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_ColorPreviewView");
 }
 %end
 
-%hook _$s5Orion7AnyHookPAAE16hookWillActivateSbyFZ
-void _$s5Orion7AnyHookPAAE16hookWillActivateSbyFZ() {
+%hook _OBJC_METACLASS_$_NSTimerCallbackClass
+void _OBJC_METACLASS_$_NSTimerCallbackClass() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion7AnyHookPAAE16hookWillActivateSbyFZ");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_NSTimerCallbackClass");
 }
 %end
 
-%hook _$s5Orion8BackendsO9SubstrateVAA7BackendAAWP
-void _$s5Orion8BackendsO9SubstrateVAA7BackendAAWP() {
+%hook _OBJC_METACLASS_$_WBTouchTrailDotView
+void _OBJC_METACLASS_$_WBTouchTrailDotView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion8BackendsO9SubstrateVAA7BackendAAWP");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_WBTouchTrailDotView");
 }
 %end
 
-%hook _$s5Orion8BackendsO9SubstrateVAEycfC
-void _$s5Orion8BackendsO9SubstrateVAEycfC() {
+%hook _OBJC_METACLASS_$_WBTouchTrailView
+void _OBJC_METACLASS_$_WBTouchTrailView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion8BackendsO9SubstrateVAEycfC");
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_WBTouchTrailView");
 }
 %end
 
-%hook _$s5Orion8BackendsO9SubstrateVMa
-void _$s5Orion8BackendsO9SubstrateVMa() {
+%hook __Z20shouldHideSelfAvatarv
+void __Z20shouldHideSelfAvatarv() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5Orion8BackendsO9SubstrateVMa");
+    NSLog(@"[+] Hooked: __Z20shouldHideSelfAvatarv");
 }
 %end
 
-%hook _$s5_Glue5Orion17ClassHookProtocolPTl
-void _$s5_Glue5Orion17ClassHookProtocolPTl() {
+%hook __Z21shouldHideOtherAvatarv
+void __Z21shouldHideOtherAvatarv() {
     %orig;
-    NSLog(@"[+] Hooked: _$s5_Glue5Orion17ClassHookProtocolPTl");
+    NSLog(@"[+] Hooked: __Z21shouldHideOtherAvatarv");
 }
 %end
 
-%hook _$s6Target5Orion17ClassHookProtocolPTl
-void _$s6Target5Orion17ClassHookProtocolPTl() {
+%hook __Z24findParentViewControllerP6UIView
+void __Z24findParentViewControllerP6UIView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s6Target5Orion17ClassHookProtocolPTl");
+    NSLog(@"[+] Hooked: __Z24findParentViewControllerP6UIView");
 }
 %end
 
-%hook _$s8Dispatch0A13WorkItemFlagsVMa
-void _$s8Dispatch0A13WorkItemFlagsVMa() {
+%hook __Z31findParentViewControllerForChatP6UIView
+void __Z31findParentViewControllerForChatP6UIView() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A13WorkItemFlagsVMa");
+    NSLog(@"[+] Hooked: __Z31findParentViewControllerForChatP6UIView");
 }
 %end
 
-%hook _$s8Dispatch0A13WorkItemFlagsVMn
-void _$s8Dispatch0A13WorkItemFlagsVMn() {
+%hook _kChatAvatarURLKey
+void _kChatAvatarURLKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A13WorkItemFlagsVMn");
+    NSLog(@"[+] Hooked: _kChatAvatarURLKey");
 }
 %end
 
-%hook _$s8Dispatch0A13WorkItemFlagsVs10SetAlgebraAAMc
-void _$s8Dispatch0A13WorkItemFlagsVs10SetAlgebraAAMc() {
+%hook _kDefaultAvatarRadius
+void _kDefaultAvatarRadius() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A13WorkItemFlagsVs10SetAlgebraAAMc");
+    NSLog(@"[+] Hooked: _kDefaultAvatarRadius");
 }
 %end
 
-%hook _$s8Dispatch0A3QoSV11unspecifiedACvgZ
-void _$s8Dispatch0A3QoSV11unspecifiedACvgZ() {
+%hook _kDefaultAvatarSize
+void _kDefaultAvatarSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A3QoSV11unspecifiedACvgZ");
+    NSLog(@"[+] Hooked: _kDefaultAvatarSize");
 }
 %end
 
-%hook _$s8Dispatch0A3QoSVMa
-void _$s8Dispatch0A3QoSVMa() {
+%hook _kDefaultAvatarSpacing
+void _kDefaultAvatarSpacing() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A3QoSVMa");
+    NSLog(@"[+] Hooked: _kDefaultAvatarSpacing");
 }
 %end
 
-%hook _$s8Dispatch0A4TimeV3nowACyFZ
-void _$s8Dispatch0A4TimeV3nowACyFZ() {
+%hook _kDefaultNicknameSize
+void _kDefaultNicknameSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A4TimeV3nowACyFZ");
+    NSLog(@"[+] Hooked: _kDefaultNicknameSize");
 }
 %end
 
-%hook _$s8Dispatch0A4TimeVMa
-void _$s8Dispatch0A4TimeVMa() {
+%hook _kDefaultSeparatorSize
+void _kDefaultSeparatorSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch0A4TimeVMa");
+    NSLog(@"[+] Hooked: _kDefaultSeparatorSize");
 }
 %end
 
-%hook _$s8Dispatch1poiyAA0A4TimeVAD_SdtF
-void _$s8Dispatch1poiyAA0A4TimeVAD_SdtF() {
+%hook _kDefaultVerticalOffset
+void _kDefaultVerticalOffset() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8Dispatch1poiyAA0A4TimeVAD_SdtF");
+    NSLog(@"[+] Hooked: _kDefaultVerticalOffset");
 }
 %end
 
-%hook _$s8HookType5Orion010_GlueClassA0PTl
-void _$s8HookType5Orion010_GlueClassA0PTl() {
+%hook _kMaxAvatarSize
+void _kMaxAvatarSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8HookType5Orion010_GlueClassA0PTl");
+    NSLog(@"[+] Hooked: _kMaxAvatarSize");
 }
 %end
 
-%hook _$s8OrigType5Orion14_GlueClassHookPTl
-void _$s8OrigType5Orion14_GlueClassHookPTl() {
+%hook _kMaxNicknameSize
+void _kMaxNicknameSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8OrigType5Orion14_GlueClassHookPTl");
+    NSLog(@"[+] Hooked: _kMaxNicknameSize");
 }
 %end
 
-%hook _$s8SuprType5Orion14_GlueClassHookPTl
-void _$s8SuprType5Orion14_GlueClassHookPTl() {
+%hook _kMinAvatarSize
+void _kMinAvatarSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$s8SuprType5Orion14_GlueClassHookPTl");
+    NSLog(@"[+] Hooked: _kMinAvatarSize");
 }
 %end
 
-%hook _$sBoWV
-void _$sBoWV() {
+%hook _kMinNicknameSize
+void _kMinNicknameSize() {
     %orig;
-    NSLog(@"[+] Hooked: _$sBoWV");
+    NSLog(@"[+] Hooked: _kMinNicknameSize");
 }
 %end
 
-%hook _$sSD10FoundationE36_unconditionallyBridgeFromObjectiveCySDyxq_GSo12NSDictionaryCSgFZ
-void _$sSD10FoundationE36_unconditionallyBridgeFromObjectiveCySDyxq_GSo12NSDictionaryCSgFZ() {
+%hook _kNavigationAvatarModeKey
+void _kNavigationAvatarModeKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSD10FoundationE36_unconditionallyBridgeFromObjectiveCySDyxq_GSo12NSDictionaryCSgFZ");
+    NSLog(@"[+] Hooked: _kNavigationAvatarModeKey");
 }
 %end
 
-%hook _$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF
-void _$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF() {
+%hook _kNavigationAvatarRadiusKey
+void _kNavigationAvatarRadiusKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSS10FoundationE19_bridgeToObjectiveCSo8NSStringCyF");
+    NSLog(@"[+] Hooked: _kNavigationAvatarRadiusKey");
 }
 %end
 
-%hook _$sSSN
-void _$sSSN() {
+%hook _kNavigationAvatarSizeKey
+void _kNavigationAvatarSizeKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSSN");
+    NSLog(@"[+] Hooked: _kNavigationAvatarSizeKey");
 }
 %end
 
-%hook _$sSSSHsWP
-void _$sSSSHsWP() {
+%hook _kNavigationAvatarSpacingKey
+void _kNavigationAvatarSpacingKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSSSHsWP");
+    NSLog(@"[+] Hooked: _kNavigationAvatarSpacingKey");
 }
 %end
 
-%hook _$sSayxGSTsMc
-void _$sSayxGSTsMc() {
+%hook _kNavigationNicknamePositionKey
+void _kNavigationNicknamePositionKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSayxGSTsMc");
+    NSLog(@"[+] Hooked: _kNavigationNicknamePositionKey");
 }
 %end
 
-%hook _$sSo17OS_dispatch_queueC8DispatchE10asyncAfter8deadline3qos5flags7executeyAC0D4TimeV_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF
-void _$sSo17OS_dispatch_queueC8DispatchE10asyncAfter8deadline3qos5flags7executeyAC0D4TimeV_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF() {
+%hook _kNavigationNicknameSizeKey
+void _kNavigationNicknameSizeKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSo17OS_dispatch_queueC8DispatchE10asyncAfter8deadline3qos5flags7executeyAC0D4TimeV_AC0D3QoSVAC0D13WorkItemFlagsVyyXBtF");
+    NSLog(@"[+] Hooked: _kNavigationNicknameSizeKey");
 }
 %end
 
-%hook _$sSo17OS_dispatch_queueC8DispatchE4mainABvgZ
-void _$sSo17OS_dispatch_queueC8DispatchE4mainABvgZ() {
+%hook _kNavigationSeparatorImageKey
+void _kNavigationSeparatorImageKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sSo17OS_dispatch_queueC8DispatchE4mainABvgZ");
+    NSLog(@"[+] Hooked: _kNavigationSeparatorImageKey");
 }
 %end
 
-%hook _$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj
-void _$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj() {
+%hook _kNavigationSeparatorSizeKey
+void _kNavigationSeparatorSizeKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss10SetAlgebraPyxqd__ncSTRd__7ElementQyd__ACRtzlufCTj");
+    NSLog(@"[+] Hooked: _kNavigationSeparatorSizeKey");
 }
 %end
 
-%hook _$ss11AnyHashableV13_rawHashValue4seedS2i_tF
-void _$ss11AnyHashableV13_rawHashValue4seedS2i_tF() {
+%hook _kNavigationSeparatorTextKey
+void _kNavigationSeparatorTextKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss11AnyHashableV13_rawHashValue4seedS2i_tF");
+    NSLog(@"[+] Hooked: _kNavigationSeparatorTextKey");
 }
 %end
 
-%hook _$ss11AnyHashableV2eeoiySbAB_ABtFZ
-void _$ss11AnyHashableV2eeoiySbAB_ABtFZ() {
+%hook _kNavigationShowAvatarKey
+void _kNavigationShowAvatarKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss11AnyHashableV2eeoiySbAB_ABtFZ");
+    NSLog(@"[+] Hooked: _kNavigationShowAvatarKey");
 }
 %end
 
-%hook _$ss11AnyHashableVN
-void _$ss11AnyHashableVN() {
+%hook _kNavigationShowInGroupKey
+void _kNavigationShowInGroupKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss11AnyHashableVN");
+    NSLog(@"[+] Hooked: _kNavigationShowInGroupKey");
 }
 %end
 
-%hook _$ss11AnyHashableVSHsWP
-void _$ss11AnyHashableVSHsWP() {
+%hook _kNavigationShowInOfficialKey
+void _kNavigationShowInOfficialKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss11AnyHashableVSHsWP");
+    NSLog(@"[+] Hooked: _kNavigationShowInOfficialKey");
 }
 %end
 
-%hook _$ss11AnyHashableVyABxcSHRzlufC
-void _$ss11AnyHashableVyABxcSHRzlufC() {
+%hook _kNavigationShowInPrivateKey
+void _kNavigationShowInPrivateKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss11AnyHashableVyABxcSHRzlufC");
+    NSLog(@"[+] Hooked: _kNavigationShowInPrivateKey");
 }
 %end
 
-%hook _$ss23_ContiguousArrayStorageCMn
-void _$ss23_ContiguousArrayStorageCMn() {
+%hook _kNavigationShowOtherAvatarKey
+void _kNavigationShowOtherAvatarKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$ss23_ContiguousArrayStorageCMn");
+    NSLog(@"[+] Hooked: _kNavigationShowOtherAvatarKey");
 }
 %end
 
-%hook _$sypN
-void _$sypN() {
+%hook _kNavigationShowOtherNicknameKey
+void _kNavigationShowOtherNicknameKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sypN");
+    NSLog(@"[+] Hooked: _kNavigationShowOtherNicknameKey");
 }
 %end
 
-%hook _$sytN
-void _$sytN() {
+%hook _kNavigationShowPopoverWhenTapAvatarKey
+void _kNavigationShowPopoverWhenTapAvatarKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sytN");
+    NSLog(@"[+] Hooked: _kNavigationShowPopoverWhenTapAvatarKey");
 }
 %end
 
-%hook _$sytWV
-void _$sytWV() {
+%hook _kNavigationShowRemarkNameKey
+void _kNavigationShowRemarkNameKey() {
     %orig;
-    NSLog(@"[+] Hooked: _$sytWV");
+    NSLog(@"[+] Hooked: _kNavigationShowRemarkNameKey");
+}
+%end
+
+%hook _kNavigationShowSelfAvatarKey
+void _kNavigationShowSelfAvatarKey() {
+    %orig;
+    NSLog(@"[+] Hooked: _kNavigationShowSelfAvatarKey");
+}
+%end
+
+%hook _kNavigationVerticalOffsetKey
+void _kNavigationVerticalOffsetKey() {
+    %orig;
+    NSLog(@"[+] Hooked: _kNavigationVerticalOffsetKey");
+}
+%end
+
+%hook _kUserAvatarURLKey
+void _kUserAvatarURLKey() {
+    %orig;
+    NSLog(@"[+] Hooked: _kUserAvatarURLKey");
+}
+%end
+
+%hook _AVAudioSessionCategoryPlayback
+void _AVAudioSessionCategoryPlayback() {
+    %orig;
+    NSLog(@"[+] Hooked: _AVAudioSessionCategoryPlayback");
+}
+%end
+
+%hook _CACurrentMediaTime
+void _CACurrentMediaTime() {
+    %orig;
+    NSLog(@"[+] Hooked: _CACurrentMediaTime");
+}
+%end
+
+%hook _CFNotificationCenterAddObserver
+void _CFNotificationCenterAddObserver() {
+    %orig;
+    NSLog(@"[+] Hooked: _CFNotificationCenterAddObserver");
+}
+%end
+
+%hook _CFNotificationCenterGetDarwinNotifyCenter
+void _CFNotificationCenterGetDarwinNotifyCenter() {
+    %orig;
+    NSLog(@"[+] Hooked: _CFNotificationCenterGetDarwinNotifyCenter");
+}
+%end
+
+%hook _CFNotificationCenterPostNotification
+void _CFNotificationCenterPostNotification() {
+    %orig;
+    NSLog(@"[+] Hooked: _CFNotificationCenterPostNotification");
+}
+%end
+
+%hook _CGAffineTransformIdentity
+void _CGAffineTransformIdentity() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGAffineTransformIdentity");
+}
+%end
+
+%hook _CGAffineTransformMakeScale
+void _CGAffineTransformMakeScale() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGAffineTransformMakeScale");
+}
+%end
+
+%hook _CGRectGetMaxX
+void _CGRectGetMaxX() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGRectGetMaxX");
+}
+%end
+
+%hook _CGRectGetMaxY
+void _CGRectGetMaxY() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGRectGetMaxY");
+}
+%end
+
+%hook _CGRectGetMidX
+void _CGRectGetMidX() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGRectGetMidX");
+}
+%end
+
+%hook _CGRectGetMinX
+void _CGRectGetMinX() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGRectGetMinX");
+}
+%end
+
+%hook _CGRectInset
+void _CGRectInset() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGRectInset");
+}
+%end
+
+%hook _CGRectZero
+void _CGRectZero() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGRectZero");
+}
+%end
+
+%hook _CGSizeZero
+void _CGSizeZero() {
+    %orig;
+    NSLog(@"[+] Hooked: _CGSizeZero");
+}
+%end
+
+%hook _MSHookMessageEx
+void _MSHookMessageEx() {
+    %orig;
+    NSLog(@"[+] Hooked: _MSHookMessageEx");
 }
 %end
 
@@ -644,38 +770,745 @@ void _NSClassFromString() {
 }
 %end
 
-%hook _OBJC_CLASS_$_OS_dispatch_queue
-void _OBJC_CLASS_$_OS_dispatch_queue() {
+%hook _NSFontAttributeName
+void _NSFontAttributeName() {
     %orig;
-    NSLog(@"[+] Hooked: _OBJC_CLASS_$_OS_dispatch_queue");
+    NSLog(@"[+] Hooked: _NSFontAttributeName");
 }
 %end
 
-%hook _OBJC_CLASS_$__TtCs12_SwiftObject
-void _OBJC_CLASS_$__TtCs12_SwiftObject() {
+%hook _NSForegroundColorAttributeName
+void _NSForegroundColorAttributeName() {
     %orig;
-    NSLog(@"[+] Hooked: _OBJC_CLASS_$__TtCs12_SwiftObject");
+    NSLog(@"[+] Hooked: _NSForegroundColorAttributeName");
 }
 %end
 
-%hook _OBJC_METACLASS_$__TtCs12_SwiftObject
-void _OBJC_METACLASS_$__TtCs12_SwiftObject() {
+%hook _NSLog
+void _NSLog() {
     %orig;
-    NSLog(@"[+] Hooked: _OBJC_METACLASS_$__TtCs12_SwiftObject");
+    NSLog(@"[+] Hooked: _NSLog");
 }
 %end
 
-%hook __Block_copy
-void __Block_copy() {
+%hook _NSParagraphStyleAttributeName
+void _NSParagraphStyleAttributeName() {
     %orig;
-    NSLog(@"[+] Hooked: __Block_copy");
+    NSLog(@"[+] Hooked: _NSParagraphStyleAttributeName");
 }
 %end
 
-%hook __Block_release
-void __Block_release() {
+%hook _NSRunLoopCommonModes
+void _NSRunLoopCommonModes() {
     %orig;
-    NSLog(@"[+] Hooked: __Block_release");
+    NSLog(@"[+] Hooked: _NSRunLoopCommonModes");
+}
+%end
+
+%hook _NSSearchPathForDirectoriesInDomains
+void _NSSearchPathForDirectoriesInDomains() {
+    %orig;
+    NSLog(@"[+] Hooked: _NSSearchPathForDirectoriesInDomains");
+}
+%end
+
+%hook _NSStringFromClass
+void _NSStringFromClass() {
+    %orig;
+    NSLog(@"[+] Hooked: _NSStringFromClass");
+}
+%end
+
+%hook _NSURLIsExcludedFromBackupKey
+void _NSURLIsExcludedFromBackupKey() {
+    %orig;
+    NSLog(@"[+] Hooked: _NSURLIsExcludedFromBackupKey");
+}
+%end
+
+%hook _OBJC_CLASS_$_AVAudioPlayer
+void _OBJC_CLASS_$_AVAudioPlayer() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_AVAudioPlayer");
+}
+%end
+
+%hook _OBJC_CLASS_$_AVAudioSession
+void _OBJC_CLASS_$_AVAudioSession() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_AVAudioSession");
+}
+%end
+
+%hook _OBJC_CLASS_$_CABasicAnimation
+void _OBJC_CLASS_$_CABasicAnimation() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CABasicAnimation");
+}
+%end
+
+%hook _OBJC_CLASS_$_CAShapeLayer
+void _OBJC_CLASS_$_CAShapeLayer() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_CAShapeLayer");
+}
+%end
+
+%hook _OBJC_CLASS_$_LAContext
+void _OBJC_CLASS_$_LAContext() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_LAContext");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSArray
+void _OBJC_CLASS_$_NSArray() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSArray");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSAttributedString
+void _OBJC_CLASS_$_NSAttributedString() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSAttributedString");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSBundle
+void _OBJC_CLASS_$_NSBundle() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSBundle");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSCharacterSet
+void _OBJC_CLASS_$_NSCharacterSet() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSCharacterSet");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSConstantArray
+void _OBJC_CLASS_$_NSConstantArray() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSConstantArray");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSConstantDictionary
+void _OBJC_CLASS_$_NSConstantDictionary() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSConstantDictionary");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSConstantDoubleNumber
+void _OBJC_CLASS_$_NSConstantDoubleNumber() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSConstantDoubleNumber");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSConstantIntegerNumber
+void _OBJC_CLASS_$_NSConstantIntegerNumber() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSConstantIntegerNumber");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSData
+void _OBJC_CLASS_$_NSData() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSData");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSDate
+void _OBJC_CLASS_$_NSDate() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSDate");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSDateFormatter
+void _OBJC_CLASS_$_NSDateFormatter() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSDateFormatter");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSDictionary
+void _OBJC_CLASS_$_NSDictionary() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSDictionary");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSFileManager
+void _OBJC_CLASS_$_NSFileManager() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSFileManager");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSIndexPath
+void _OBJC_CLASS_$_NSIndexPath() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSIndexPath");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSIndexSet
+void _OBJC_CLASS_$_NSIndexSet() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSIndexSet");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSKeyedArchiver
+void _OBJC_CLASS_$_NSKeyedArchiver() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSKeyedArchiver");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSKeyedUnarchiver
+void _OBJC_CLASS_$_NSKeyedUnarchiver() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSKeyedUnarchiver");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSLayoutConstraint
+void _OBJC_CLASS_$_NSLayoutConstraint() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSLayoutConstraint");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSMutableArray
+void _OBJC_CLASS_$_NSMutableArray() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSMutableArray");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSMutableAttributedString
+void _OBJC_CLASS_$_NSMutableAttributedString() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSMutableAttributedString");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSMutableDictionary
+void _OBJC_CLASS_$_NSMutableDictionary() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSMutableDictionary");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSMutableParagraphStyle
+void _OBJC_CLASS_$_NSMutableParagraphStyle() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSMutableParagraphStyle");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSMutableString
+void _OBJC_CLASS_$_NSMutableString() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSMutableString");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSNotificationCenter
+void _OBJC_CLASS_$_NSNotificationCenter() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSNotificationCenter");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSNumber
+void _OBJC_CLASS_$_NSNumber() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSNumber");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSObject
+void _OBJC_CLASS_$_NSObject() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSObject");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSOperationQueue
+void _OBJC_CLASS_$_NSOperationQueue() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSOperationQueue");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSPropertyListSerialization
+void _OBJC_CLASS_$_NSPropertyListSerialization() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSPropertyListSerialization");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSRegularExpression
+void _OBJC_CLASS_$_NSRegularExpression() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSRegularExpression");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSRunLoop
+void _OBJC_CLASS_$_NSRunLoop() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSRunLoop");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSScanner
+void _OBJC_CLASS_$_NSScanner() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSScanner");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSString
+void _OBJC_CLASS_$_NSString() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSString");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSTimer
+void _OBJC_CLASS_$_NSTimer() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSTimer");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSURL
+void _OBJC_CLASS_$_NSURL() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSURL");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSURLRequest
+void _OBJC_CLASS_$_NSURLRequest() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSURLRequest");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSURLSession
+void _OBJC_CLASS_$_NSURLSession() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSURLSession");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSURLSessionConfiguration
+void _OBJC_CLASS_$_NSURLSessionConfiguration() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSURLSessionConfiguration");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSUserDefaults
+void _OBJC_CLASS_$_NSUserDefaults() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSUserDefaults");
+}
+%end
+
+%hook _OBJC_CLASS_$_NSValue
+void _OBJC_CLASS_$_NSValue() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_NSValue");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIActivityIndicatorView
+void _OBJC_CLASS_$_UIActivityIndicatorView() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIActivityIndicatorView");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIAlertAction
+void _OBJC_CLASS_$_UIAlertAction() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIAlertAction");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIAlertController
+void _OBJC_CLASS_$_UIAlertController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIAlertController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIApplication
+void _OBJC_CLASS_$_UIApplication() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIApplication");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIBarButtonItem
+void _OBJC_CLASS_$_UIBarButtonItem() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIBarButtonItem");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIBezierPath
+void _OBJC_CLASS_$_UIBezierPath() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIBezierPath");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIButton
+void _OBJC_CLASS_$_UIButton() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIButton");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIColor
+void _OBJC_CLASS_$_UIColor() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIColor");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIColorPickerViewController
+void _OBJC_CLASS_$_UIColorPickerViewController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIColorPickerViewController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIContextualAction
+void _OBJC_CLASS_$_UIContextualAction() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIContextualAction");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIDevice
+void _OBJC_CLASS_$_UIDevice() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIDevice");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIFont
+void _OBJC_CLASS_$_UIFont() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIFont");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIImage
+void _OBJC_CLASS_$_UIImage() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIImage");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIImagePickerController
+void _OBJC_CLASS_$_UIImagePickerController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIImagePickerController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIImageSymbolConfiguration
+void _OBJC_CLASS_$_UIImageSymbolConfiguration() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIImageSymbolConfiguration");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIImageView
+void _OBJC_CLASS_$_UIImageView() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIImageView");
+}
+%end
+
+%hook _OBJC_CLASS_$_UILabel
+void _OBJC_CLASS_$_UILabel() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UILabel");
+}
+%end
+
+%hook _OBJC_CLASS_$_UINavigationController
+void _OBJC_CLASS_$_UINavigationController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UINavigationController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UINotificationFeedbackGenerator
+void _OBJC_CLASS_$_UINotificationFeedbackGenerator() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UINotificationFeedbackGenerator");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIPasteboard
+void _OBJC_CLASS_$_UIPasteboard() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIPasteboard");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIScreen
+void _OBJC_CLASS_$_UIScreen() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIScreen");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIStackView
+void _OBJC_CLASS_$_UIStackView() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIStackView");
+}
+%end
+
+%hook _OBJC_CLASS_$_UISwipeActionsConfiguration
+void _OBJC_CLASS_$_UISwipeActionsConfiguration() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UISwipeActionsConfiguration");
+}
+%end
+
+%hook _OBJC_CLASS_$_UISwitch
+void _OBJC_CLASS_$_UISwitch() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UISwitch");
+}
+%end
+
+%hook _OBJC_CLASS_$_UITabBarController
+void _OBJC_CLASS_$_UITabBarController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UITabBarController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UITableView
+void _OBJC_CLASS_$_UITableView() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UITableView");
+}
+%end
+
+%hook _OBJC_CLASS_$_UITableViewCell
+void _OBJC_CLASS_$_UITableViewCell() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UITableViewCell");
+}
+%end
+
+%hook _OBJC_CLASS_$_UITableViewController
+void _OBJC_CLASS_$_UITableViewController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UITableViewController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UITapGestureRecognizer
+void _OBJC_CLASS_$_UITapGestureRecognizer() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UITapGestureRecognizer");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIView
+void _OBJC_CLASS_$_UIView() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIView");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIViewController
+void _OBJC_CLASS_$_UIViewController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIViewController");
+}
+%end
+
+%hook _OBJC_CLASS_$_UIWindowScene
+void _OBJC_CLASS_$_UIWindowScene() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_CLASS_$_UIWindowScene");
+}
+%end
+
+%hook _OBJC_EHTYPE_$_NSException
+void _OBJC_EHTYPE_$_NSException() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_EHTYPE_$_NSException");
+}
+%end
+
+%hook _OBJC_METACLASS_$_NSObject
+void _OBJC_METACLASS_$_NSObject() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_NSObject");
+}
+%end
+
+%hook _OBJC_METACLASS_$_UITableViewCell
+void _OBJC_METACLASS_$_UITableViewCell() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_UITableViewCell");
+}
+%end
+
+%hook _OBJC_METACLASS_$_UITableViewController
+void _OBJC_METACLASS_$_UITableViewController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_UITableViewController");
+}
+%end
+
+%hook _OBJC_METACLASS_$_UIView
+void _OBJC_METACLASS_$_UIView() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_UIView");
+}
+%end
+
+%hook _OBJC_METACLASS_$_UIViewController
+void _OBJC_METACLASS_$_UIViewController() {
+    %orig;
+    NSLog(@"[+] Hooked: _OBJC_METACLASS_$_UIViewController");
+}
+%end
+
+%hook _UIApplicationDidBecomeActiveNotification
+void _UIApplicationDidBecomeActiveNotification() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIApplicationDidBecomeActiveNotification");
+}
+%end
+
+%hook _UIApplicationDidEnterBackgroundNotification
+void _UIApplicationDidEnterBackgroundNotification() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIApplicationDidEnterBackgroundNotification");
+}
+%end
+
+%hook _UIApplicationWillEnterForegroundNotification
+void _UIApplicationWillEnterForegroundNotification() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIApplicationWillEnterForegroundNotification");
+}
+%end
+
+%hook _UIBackgroundTaskInvalid
+void _UIBackgroundTaskInvalid() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIBackgroundTaskInvalid");
+}
+%end
+
+%hook _UIFontWeightMedium
+void _UIFontWeightMedium() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIFontWeightMedium");
+}
+%end
+
+%hook _UIGraphicsBeginImageContextWithOptions
+void _UIGraphicsBeginImageContextWithOptions() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIGraphicsBeginImageContextWithOptions");
+}
+%end
+
+%hook _UIGraphicsEndImageContext
+void _UIGraphicsEndImageContext() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIGraphicsEndImageContext");
+}
+%end
+
+%hook _UIGraphicsGetImageFromCurrentImageContext
+void _UIGraphicsGetImageFromCurrentImageContext() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIGraphicsGetImageFromCurrentImageContext");
+}
+%end
+
+%hook _UIImagePNGRepresentation
+void _UIImagePNGRepresentation() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIImagePNGRepresentation");
+}
+%end
+
+%hook _UIImagePickerControllerEditedImage
+void _UIImagePickerControllerEditedImage() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIImagePickerControllerEditedImage");
+}
+%end
+
+%hook _UIImagePickerControllerOriginalImage
+void _UIImagePickerControllerOriginalImage() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIImagePickerControllerOriginalImage");
+}
+%end
+
+%hook _UIScreenCapturedDidChangeNotification
+void _UIScreenCapturedDidChangeNotification() {
+    %orig;
+    NSLog(@"[+] Hooked: _UIScreenCapturedDidChangeNotification");
+}
+%end
+
+%hook _UITableViewAutomaticDimension
+void _UITableViewAutomaticDimension() {
+    %orig;
+    NSLog(@"[+] Hooked: _UITableViewAutomaticDimension");
+}
+%end
+
+%hook __Block_object_assign
+void __Block_object_assign() {
+    %orig;
+    NSLog(@"[+] Hooked: __Block_object_assign");
+}
+%end
+
+%hook __Block_object_dispose
+void __Block_object_dispose() {
+    %orig;
+    NSLog(@"[+] Hooked: __Block_object_dispose");
+}
+%end
+
+%hook __NSConcreteGlobalBlock
+void __NSConcreteGlobalBlock() {
+    %orig;
+    NSLog(@"[+] Hooked: __NSConcreteGlobalBlock");
 }
 %end
 
@@ -686,17 +1519,17 @@ void __NSConcreteStackBlock() {
 }
 %end
 
-%hook __ZdlPv
-void __ZdlPv() {
+%hook __Unwind_Resume
+void __Unwind_Resume() {
     %orig;
-    NSLog(@"[+] Hooked: __ZdlPv");
+    NSLog(@"[+] Hooked: __Unwind_Resume");
 }
 %end
 
-%hook __Znwm
-void __Znwm() {
+%hook __ZSt9terminatev
+void __ZSt9terminatev() {
     %orig;
-    NSLog(@"[+] Hooked: __Znwm");
+    NSLog(@"[+] Hooked: __ZSt9terminatev");
 }
 %end
 
@@ -707,10 +1540,66 @@ void ___CFConstantStringClassReference() {
 }
 %end
 
-%hook ___chkstk_darwin
-void ___chkstk_darwin() {
+%hook ___NSArray0__struct
+void ___NSArray0__struct() {
     %orig;
-    NSLog(@"[+] Hooked: ___chkstk_darwin");
+    NSLog(@"[+] Hooked: ___NSArray0__struct");
+}
+%end
+
+%hook ___NSDictionary0__struct
+void ___NSDictionary0__struct() {
+    %orig;
+    NSLog(@"[+] Hooked: ___NSDictionary0__struct");
+}
+%end
+
+%hook ___cxa_begin_catch
+void ___cxa_begin_catch() {
+    %orig;
+    NSLog(@"[+] Hooked: ___cxa_begin_catch");
+}
+%end
+
+%hook ___gxx_personality_v0
+void ___gxx_personality_v0() {
+    %orig;
+    NSLog(@"[+] Hooked: ___gxx_personality_v0");
+}
+%end
+
+%hook ___kCFBooleanFalse
+void ___kCFBooleanFalse() {
+    %orig;
+    NSLog(@"[+] Hooked: ___kCFBooleanFalse");
+}
+%end
+
+%hook ___kCFBooleanTrue
+void ___kCFBooleanTrue() {
+    %orig;
+    NSLog(@"[+] Hooked: ___kCFBooleanTrue");
+}
+%end
+
+%hook ___objc_personality_v0
+void ___objc_personality_v0() {
+    %orig;
+    NSLog(@"[+] Hooked: ___objc_personality_v0");
+}
+%end
+
+%hook ___stack_chk_fail
+void ___stack_chk_fail() {
+    %orig;
+    NSLog(@"[+] Hooked: ___stack_chk_fail");
+}
+%end
+
+%hook ___stack_chk_guard
+void ___stack_chk_guard() {
+    %orig;
+    NSLog(@"[+] Hooked: ___stack_chk_guard");
 }
 %end
 
@@ -728,101 +1617,24 @@ void __objc_empty_cache() {
 }
 %end
 
-%hook __swiftEmptyArrayStorage
-void __swiftEmptyArrayStorage() {
+%hook _arc4random_uniform
+void _arc4random_uniform() {
     %orig;
-    NSLog(@"[+] Hooked: __swiftEmptyArrayStorage");
+    NSLog(@"[+] Hooked: _arc4random_uniform");
 }
 %end
 
-%hook __swift_FORCE_LOAD_$_swiftCoreFoundation
-void __swift_FORCE_LOAD_$_swiftCoreFoundation() {
+%hook _class_addMethod
+void _class_addMethod() {
     %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftCoreFoundation");
+    NSLog(@"[+] Hooked: _class_addMethod");
 }
 %end
 
-%hook __swift_FORCE_LOAD_$_swiftCoreGraphics
-void __swift_FORCE_LOAD_$_swiftCoreGraphics() {
+%hook _class_getInstanceVariable
+void _class_getInstanceVariable() {
     %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftCoreGraphics");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftCoreImage
-void __swift_FORCE_LOAD_$_swiftCoreImage() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftCoreImage");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftDarwin
-void __swift_FORCE_LOAD_$_swiftDarwin() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftDarwin");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftDataDetection
-void __swift_FORCE_LOAD_$_swiftDataDetection() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftDataDetection");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftDispatch
-void __swift_FORCE_LOAD_$_swiftDispatch() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftDispatch");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftFileProvider
-void __swift_FORCE_LOAD_$_swiftFileProvider() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftFileProvider");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftFoundation
-void __swift_FORCE_LOAD_$_swiftFoundation() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftFoundation");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftMetal
-void __swift_FORCE_LOAD_$_swiftMetal() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftMetal");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftObjectiveC
-void __swift_FORCE_LOAD_$_swiftObjectiveC() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftObjectiveC");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftQuartzCore
-void __swift_FORCE_LOAD_$_swiftQuartzCore() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftQuartzCore");
-}
-%end
-
-%hook __swift_FORCE_LOAD_$_swiftUIKit
-void __swift_FORCE_LOAD_$_swiftUIKit() {
-    %orig;
-    NSLog(@"[+] Hooked: __swift_FORCE_LOAD_$_swiftUIKit");
-}
-%end
-
-%hook _abort
-void _abort() {
-    %orig;
-    NSLog(@"[+] Hooked: _abort");
+    NSLog(@"[+] Hooked: _class_getInstanceVariable");
 }
 %end
 
@@ -833,10 +1645,24 @@ void _dispatch_after() {
 }
 %end
 
-%hook _dispatch_once_f
-void _dispatch_once_f() {
+%hook _dispatch_async
+void _dispatch_async() {
     %orig;
-    NSLog(@"[+] Hooked: _dispatch_once_f");
+    NSLog(@"[+] Hooked: _dispatch_async");
+}
+%end
+
+%hook _dispatch_get_global_queue
+void _dispatch_get_global_queue() {
+    %orig;
+    NSLog(@"[+] Hooked: _dispatch_get_global_queue");
+}
+%end
+
+%hook _dispatch_once
+void _dispatch_once() {
+    %orig;
+    NSLog(@"[+] Hooked: _dispatch_once");
 }
 %end
 
@@ -847,31 +1673,122 @@ void _dispatch_time() {
 }
 %end
 
-%hook _dlsym
-void _dlsym() {
+%hook _exit
+void _exit() {
     %orig;
-    NSLog(@"[+] Hooked: _dlsym");
+    NSLog(@"[+] Hooked: _exit");
 }
 %end
 
-%hook _malloc_size
-void _malloc_size() {
+%hook _ivar_getOffset
+void _ivar_getOffset() {
     %orig;
-    NSLog(@"[+] Hooked: _malloc_size");
+    NSLog(@"[+] Hooked: _ivar_getOffset");
 }
 %end
 
-%hook _memcpy
-void _memcpy() {
+%hook _kCAFillModeForwards
+void _kCAFillModeForwards() {
     %orig;
-    NSLog(@"[+] Hooked: _memcpy");
+    NSLog(@"[+] Hooked: _kCAFillModeForwards");
 }
 %end
 
-%hook _memmove
-void _memmove() {
+%hook _objc_alloc
+void _objc_alloc() {
     %orig;
-    NSLog(@"[+] Hooked: _memmove");
+    NSLog(@"[+] Hooked: _objc_alloc");
+}
+%end
+
+%hook _objc_alloc_init
+void _objc_alloc_init() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_alloc_init");
+}
+%end
+
+%hook _objc_autoreleasePoolPop
+void _objc_autoreleasePoolPop() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_autoreleasePoolPop");
+}
+%end
+
+%hook _objc_autoreleasePoolPush
+void _objc_autoreleasePoolPush() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_autoreleasePoolPush");
+}
+%end
+
+%hook _objc_autoreleaseReturnValue
+void _objc_autoreleaseReturnValue() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_autoreleaseReturnValue");
+}
+%end
+
+%hook _objc_begin_catch
+void _objc_begin_catch() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_begin_catch");
+}
+%end
+
+%hook _objc_copyWeak
+void _objc_copyWeak() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_copyWeak");
+}
+%end
+
+%hook _objc_destroyWeak
+void _objc_destroyWeak() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_destroyWeak");
+}
+%end
+
+%hook _objc_end_catch
+void _objc_end_catch() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_end_catch");
+}
+%end
+
+%hook _objc_enumerationMutation
+void _objc_enumerationMutation() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_enumerationMutation");
+}
+%end
+
+%hook _objc_getAssociatedObject
+void _objc_getAssociatedObject() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_getAssociatedObject");
+}
+%end
+
+%hook _objc_getClass
+void _objc_getClass() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_getClass");
+}
+%end
+
+%hook _objc_initWeak
+void _objc_initWeak() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_initWeak");
+}
+%end
+
+%hook _objc_loadWeakRetained
+void _objc_loadWeakRetained() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_loadWeakRetained");
 }
 %end
 
@@ -879,6 +1796,13 @@ void _memmove() {
 void _objc_msgSend() {
     %orig;
     NSLog(@"[+] Hooked: _objc_msgSend");
+}
+%end
+
+%hook _objc_msgSendSuper2
+void _objc_msgSendSuper2() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_msgSendSuper2");
 }
 %end
 
@@ -896,10 +1820,10 @@ void _objc_opt_isKindOfClass() {
 }
 %end
 
-%hook _objc_opt_self
-void _objc_opt_self() {
+%hook _objc_opt_respondsToSelector
+void _objc_opt_respondsToSelector() {
     %orig;
-    NSLog(@"[+] Hooked: _objc_opt_self");
+    NSLog(@"[+] Hooked: _objc_opt_respondsToSelector");
 }
 %end
 
@@ -917,6 +1841,13 @@ void _objc_retain() {
 }
 %end
 
+%hook _objc_retainAutorelease
+void _objc_retainAutorelease() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_retainAutorelease");
+}
+%end
+
 %hook _objc_retainAutoreleaseReturnValue
 void _objc_retainAutoreleaseReturnValue() {
     %orig;
@@ -931,6 +1862,27 @@ void _objc_retainAutoreleasedReturnValue() {
 }
 %end
 
+%hook _objc_setAssociatedObject
+void _objc_setAssociatedObject() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_setAssociatedObject");
+}
+%end
+
+%hook _objc_setProperty_nonatomic_copy
+void _objc_setProperty_nonatomic_copy() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_setProperty_nonatomic_copy");
+}
+%end
+
+%hook _objc_storeStrong
+void _objc_storeStrong() {
+    %orig;
+    NSLog(@"[+] Hooked: _objc_storeStrong");
+}
+%end
+
 %hook _objc_unsafeClaimAutoreleasedReturnValue
 void _objc_unsafeClaimAutoreleasedReturnValue() {
     %orig;
@@ -938,317 +1890,16 @@ void _objc_unsafeClaimAutoreleasedReturnValue() {
 }
 %end
 
-%hook _os_release
-void _os_release() {
+%hook _object_getClass
+void _object_getClass() {
     %orig;
-    NSLog(@"[+] Hooked: _os_release");
+    NSLog(@"[+] Hooked: _object_getClass");
 }
 %end
 
-%hook _os_unfair_lock_lock
-void _os_unfair_lock_lock() {
+%hook _uname
+void _uname() {
     %orig;
-    NSLog(@"[+] Hooked: _os_unfair_lock_lock");
-}
-%end
-
-%hook _os_unfair_lock_trylock
-void _os_unfair_lock_trylock() {
-    %orig;
-    NSLog(@"[+] Hooked: _os_unfair_lock_trylock");
-}
-%end
-
-%hook _os_unfair_lock_unlock
-void _os_unfair_lock_unlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _os_unfair_lock_unlock");
-}
-%end
-
-%hook _pthread_cond_broadcast
-void _pthread_cond_broadcast() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_cond_broadcast");
-}
-%end
-
-%hook _pthread_cond_destroy
-void _pthread_cond_destroy() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_cond_destroy");
-}
-%end
-
-%hook _pthread_cond_init
-void _pthread_cond_init() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_cond_init");
-}
-%end
-
-%hook _pthread_cond_signal
-void _pthread_cond_signal() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_cond_signal");
-}
-%end
-
-%hook _pthread_cond_wait
-void _pthread_cond_wait() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_cond_wait");
-}
-%end
-
-%hook _pthread_getspecific
-void _pthread_getspecific() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_getspecific");
-}
-%end
-
-%hook _pthread_mutex_destroy
-void _pthread_mutex_destroy() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutex_destroy");
-}
-%end
-
-%hook _pthread_mutex_init
-void _pthread_mutex_init() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutex_init");
-}
-%end
-
-%hook _pthread_mutex_lock
-void _pthread_mutex_lock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutex_lock");
-}
-%end
-
-%hook _pthread_mutex_trylock
-void _pthread_mutex_trylock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutex_trylock");
-}
-%end
-
-%hook _pthread_mutex_unlock
-void _pthread_mutex_unlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutex_unlock");
-}
-%end
-
-%hook _pthread_mutexattr_destroy
-void _pthread_mutexattr_destroy() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutexattr_destroy");
-}
-%end
-
-%hook _pthread_mutexattr_init
-void _pthread_mutexattr_init() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutexattr_init");
-}
-%end
-
-%hook _pthread_mutexattr_settype
-void _pthread_mutexattr_settype() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_mutexattr_settype");
-}
-%end
-
-%hook _pthread_rwlock_destroy
-void _pthread_rwlock_destroy() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_destroy");
-}
-%end
-
-%hook _pthread_rwlock_init
-void _pthread_rwlock_init() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_init");
-}
-%end
-
-%hook _pthread_rwlock_rdlock
-void _pthread_rwlock_rdlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_rdlock");
-}
-%end
-
-%hook _pthread_rwlock_tryrdlock
-void _pthread_rwlock_tryrdlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_tryrdlock");
-}
-%end
-
-%hook _pthread_rwlock_trywrlock
-void _pthread_rwlock_trywrlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_trywrlock");
-}
-%end
-
-%hook _pthread_rwlock_unlock
-void _pthread_rwlock_unlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_unlock");
-}
-%end
-
-%hook _pthread_rwlock_wrlock
-void _pthread_rwlock_wrlock() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_rwlock_wrlock");
-}
-%end
-
-%hook _pthread_setspecific
-void _pthread_setspecific() {
-    %orig;
-    NSLog(@"[+] Hooked: _pthread_setspecific");
-}
-%end
-
-%hook _swift_allocObject
-void _swift_allocObject() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_allocObject");
-}
-%end
-
-%hook _swift_bridgeObjectRelease
-void _swift_bridgeObjectRelease() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_bridgeObjectRelease");
-}
-%end
-
-%hook _swift_bridgeObjectRelease_n
-void _swift_bridgeObjectRelease_n() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_bridgeObjectRelease_n");
-}
-%end
-
-%hook _swift_bridgeObjectRetain
-void _swift_bridgeObjectRetain() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_bridgeObjectRetain");
-}
-%end
-
-%hook _swift_deallocClassInstance
-void _swift_deallocClassInstance() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_deallocClassInstance");
-}
-%end
-
-%hook _swift_deallocObject
-void _swift_deallocObject() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_deallocObject");
-}
-%end
-
-%hook _swift_deletedMethodError
-void _swift_deletedMethodError() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_deletedMethodError");
-}
-%end
-
-%hook _swift_dynamicCast
-void _swift_dynamicCast() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_dynamicCast");
-}
-%end
-
-%hook _swift_errorRetain
-void _swift_errorRetain() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_errorRetain");
-}
-%end
-
-%hook _swift_getObjCClassMetadata
-void _swift_getObjCClassMetadata() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_getObjCClassMetadata");
-}
-%end
-
-%hook _swift_getSingletonMetadata
-void _swift_getSingletonMetadata() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_getSingletonMetadata");
-}
-%end
-
-%hook _swift_getTypeByMangledNameInContext
-void _swift_getTypeByMangledNameInContext() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_getTypeByMangledNameInContext");
-}
-%end
-
-%hook _swift_getTypeByMangledNameInContextInMetadataState
-void _swift_getTypeByMangledNameInContextInMetadataState() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_getTypeByMangledNameInContextInMetadataState");
-}
-%end
-
-%hook _swift_getWitnessTable
-void _swift_getWitnessTable() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_getWitnessTable");
-}
-%end
-
-%hook _swift_initClassMetadata2
-void _swift_initClassMetadata2() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_initClassMetadata2");
-}
-%end
-
-%hook _swift_once
-void _swift_once() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_once");
-}
-%end
-
-%hook _swift_release
-void _swift_release() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_release");
-}
-%end
-
-%hook _swift_retain
-void _swift_retain() {
-    %orig;
-    NSLog(@"[+] Hooked: _swift_retain");
-}
-%end
-
-%hook _voucher_adopt
-void _voucher_adopt() {
-    %orig;
-    NSLog(@"[+] Hooked: _voucher_adopt");
+    NSLog(@"[+] Hooked: _uname");
 }
 %end

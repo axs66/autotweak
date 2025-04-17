@@ -30,24 +30,8 @@ if [[ -z "$TARGET_DYLIB" ]]; then
     exit 1
 fi
 
-# 根据 dylib 选择进程
-if [[ "$TARGET_DYLIB" == *"WeChat"* ]]; then
-    PROCESS="WeChat"
-elif [[ "$TARGET_DYLIB" == *"UIKit"* ]] || [[ "$TARGET_DYLIB" == *"Keyboard"* ]]; then
-    PROCESS="SpringBoard"
-else
-    PROCESS="SpringBoard"
-fi
-
-echo "[*] 检查设备是否连接..."
-frida-ls-devices
-if [[ $? -ne 0 ]]; then
-    echo "[!] 未找到设备，无法 attach"
-    exit 1
-fi
-
-echo "[*] 自动 attach 到进程：$PROCESS"
-frida -n "$PROCESS" -U -l "$SCRIPTS_DIR/frida_script.js" --no-pause > "$RAW_OUTPUT/frida_log.txt"
+# 由于没有设备连接，跳过 frida 连接过程，直接进入源码生成
+echo "[*] 跳过设备连接，继续生成源码..."
 
 echo "[*] 生成 Hook 源码..."
 python3 "$SCRIPTS_DIR/generate_hooks_from_lief.py" "$RAW_OUTPUT/lief_result.json" "$SRC_OUTPUT"

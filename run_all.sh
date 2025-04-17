@@ -22,6 +22,10 @@ dpkg-deb -x "$DEB_FILE" "$WORK_DIR"
 
 echo "[*] 使用 LIEF 分析插件..."
 python3 "$SCRIPTS_DIR/lief_analysis.py" "$WORK_DIR" "$RAW_OUTPUT/lief_result.json"
+if [[ $? -ne 0 ]]; then
+    echo "[!] LIEF 分析失败"
+    exit 1
+fi
 
 echo "[*] 识别目标 dylib 并选取分析进程..."
 TARGET_DYLIB=$(jq -r '.dylibs[0]' "$RAW_OUTPUT/lief_result.json")
@@ -30,13 +34,20 @@ if [[ -z "$TARGET_DYLIB" ]]; then
     exit 1
 fi
 
-# 由于没有设备连接，跳过 frida 连接过程，直接进入源码生成
 echo "[*] 跳过设备连接，继续生成源码..."
 
 echo "[*] 生成 Hook 源码..."
 python3 "$SCRIPTS_DIR/generate_hooks_from_lief.py" "$RAW_OUTPUT/lief_result.json" "$SRC_OUTPUT"
+if [[ $? -ne 0 ]]; then
+    echo "[!] 生成 Hook 源码失败"
+    exit 1
+fi
 
 echo "[*] 自动生成 Makefile..."
 python3 "$SCRIPTS_DIR/generate_makefile.py" "$SRC_OUTPUT" > Makefile
+if [[ $? -ne 0 ]]; then
+    echo "[!] Makefile 生成失败"
+    exit 1
+fi
 
 echo "[*] 分析完成，结果已输出至 output 目录"

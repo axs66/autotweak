@@ -25,7 +25,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          brew install lief
           pip3 install lief
 
       - name: Download .deb (if URL provided)

@@ -49,8 +49,12 @@ jobs:
           chmod +x run_all.sh
           ./run_all.sh
 
-      - name: Upload Results
-        uses: actions/upload-artifact@v2
-        with:
-          name: analysis-result
-          path: output/
+      - name: Commit and Push Results
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add output/
+          git commit -m "Auto: Add analysis result from workflow" || echo "Nothing to commit"
+          git push
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
